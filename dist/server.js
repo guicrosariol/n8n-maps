@@ -75,7 +75,8 @@ app.get("/leads/:topic", async (request, reply) => {
   reply.status(200).send(leads);
 });
 app.listen({
-  port: Number(process.env.PORT)
+  port: Number(process.env.PORT),
+  host: "0.0.0.0"
 }).then(() => {
   console.log("Server is running! \u{1F680}", Number(process.env.PORT));
 });
